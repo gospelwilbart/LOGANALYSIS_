@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLTR Prototype · Forensic Log & Timeline Reconstructor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<div class="prototype-container">
+    <div class="navbar">
+        <div class="logo-area">
+            <div class="logo-icon"><i class="fas fa-fingerprint"></i></div>
+            <div class="logo-text">FLTR <span>| forensic timeline</span></div>
+            <div class="badge"><i class="fa-regular fa-clock"></i> session: SOC-LAB-04</div>
+        </div>
+        <div class="user-profile">
+            <i class="fa-regular fa-bell" title="Notifications"></i>
+            <i class="fa-regular fa-pen-to-square" title="Settings"></i>
+            <div class="avatar">GA</div>
+        </div>
+    </div>
+
+    <div class="main-layout">
+        <div class="filter-sidebar">
+            <div class="filter-section">
+                <h4><i class="fa-regular fa-calendar" style="margin-right: 8px;"></i> time range</h4>
+                <div class="filter-range">
+                    <div class="time-input"><span id="startTime">2025-02-14 00:00</span> <span id="endTime">2025-02-15 23:59</span></div>
+                    <input type="range" id="rangeStart" min="0" max="100" value="10">
+                    <input type="range" id="rangeEnd" min="0" max="100" value="90">
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4><i class="fa-solid fa-magnifying-glass"></i> keyword / event</h4>
+                <div class="keyword-filter">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" id="keywordInput" placeholder="failed, deleted, 4625, sudo ...">
+                </div>
+                <div class="filter-tags" id="keywordTags">
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4><i class="fa-solid fa-circle-exclamation"></i> severity <span class="event-count" id="severityCount">(0)</span></h4>
+                <div class="severity-list" id="severityList">
+                    <label class="severity-item">
+                        <input type="checkbox" value="critical" checked> <span class="dot crit"></span> critical <span class="event-count">0</span>
+                    </label>
+                    <label class="severity-item">
+                        <input type="checkbox" value="high" checked> <span class="dot high"></span> high <span class="event-count">0</span>
+                    </label>
+                    <label class="severity-item">
+                        <input type="checkbox" value="medium" checked> <span class="dot med"></span> medium <span class="event-count">0</span>
+                    </label>
+                    <label class="severity-item">
+                        <input type="checkbox" value="low" checked> <span class="dot low"></span> low <span class="event-count">0</span>
+                    </label>
+                    <label class="severity-item">
+                        <input type="checkbox" value="info" checked> <span class="dot info"></span> info <span class="event-count">0</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4><i class="fa-solid fa-server"></i> source host</h4>
+                <div class="host-tags" id="hostList">
+                </div>
+                <div class="filter-hint" id="selectAllHosts"><i class="fa-regular fa-square-check"></i> select all</div>
+            </div>
+
+            <div class="filter-section">
+                <h4>forensic integrity</h4>
+                <div class="forensic-info">
+                    <div><span>sha256 (loaded)</span><span id="forensicHash">—</span></div>
+                    <div><span>chain of custody</span><span><i class="fa-solid fa-lock" style="color:#6a8cdf;"></i> empty</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-area">
+            <div class="ingestion-bar">
+                <input type="file" id="fileInput" style="display: none;" multiple accept=".evtx,.log,.csv,.txt">
+                <div class="dropzone" id="dropzone">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <span>drag .evtx, .log, .csv</span>
+                </div>
+                <div class="progress-indicator hidden" id="progressIndicator">
+                    <i class="fa-solid fa-circle-notch fa-spin" style="color: #6d8cce;"></i>
+                    <span>Processing file...</span>
+                </div>
+                <div class="progress-indicator" id="hashDisplay">
+                    <i class="fa-solid fa-circle-check" style="color: #6abf88;"></i>
+                    <span class="hash-badge"><i class="fa-regular fa-hashtag"></i> SHA256: <span id="displayHash">—</span></span>
+                </div>
+                <div class="ingestion-status">
+                    <i class="fa-regular fa-hard-drive"></i> evidence_vault (read-only) • <span id="fileCount">0 files</span>
+                </div>
+            </div>
+
+            <div class="timeline-container" id="timelineContainer">
+            </div>
+
+            <div class="export-bar">
+                <div class="footer-note">
+                    <i class="fa-regular fa-file-lines"></i> <span id="auditTrail">audit trail: analyst GA · 0 annotations</span>
+                </div>
+                <div style="display: flex; gap: 12px;">
+                    <button class="btn" id="exportPdf"><i class="fa-regular fa-file-pdf"></i> export PDF (forensic)</button>
+                    <button class="btn btn-primary" id="exportCsv"><i class="fa-regular fa-share-from-square"></i> export CSV</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 0.5rem 2rem; background:#0d1220; border-top:1px solid #20273c; font-size:0.8rem; color:#5b6b91; display: flex; gap: 30px;">
+        <span><i class="fa-regular fa-circle-check" style="color:#79b56b;"></i> integrity: SHA256 verified (read-only vault)</span>
+        <span><i class="fa-regular fa-note-sticky"></i> <span id="annotationCount">0</span> annotations preserved</span>
+        <span><i class="fa-regular fa-clock"></i> timeline normalized to UTC · source attribution visible</span>
+    </div>
+</div>
+
+<div class="modal-overlay hidden" id="annotationModal">
+    <div class="modal">
+        <h3><i class="fa-regular fa-pen-to-square"></i> Add Annotation</h3>
+        <textarea id="annotationText" placeholder="Enter your annotation..."></textarea>
+        <div class="modal-buttons">
+            <button class="btn" id="cancelAnnotation">Cancel</button>
+            <button class="btn btn-primary" id="saveAnnotation">Save Annotation</button>
+        </div>
+    </div>
+</div>
+
+<div class="toast hidden" id="toast">
+    <i class="fa-solid fa-circle-check" style="color: #6abf88; margin-right: 10px;"></i>
+    <span id="toastMessage">Action completed</span>
+</div>
+
+<div class="details-modal-overlay hidden" id="detailsModal">
+    <div class="details-modal">
+        <button class="details-close" onclick="closeDetailsModal()"><i class="fa-solid fa-xmark"></i></button>
+        <h3><i class="fa-solid fa-eye"></i> Event Details</h3>
+        
+        <div class="details-section">
+            <h4><i class="fa-regular fa-clock"></i> Timestamp Information</h4>
+            <div class="details-row">
+                <span class="details-label">Event Time (UTC)</span>
+                <span class="details-value" id="detailTime">-</span>
+            </div>
+            <div class="details-row">
+                <span class="details-label">Normalized Time</span>
+                <span class="details-value" id="detailNormalizedTime">-</span>
+            </div>
+        </div>
+        
+        <div class="details-section">
+            <h4><i class="fa-solid fa-server"></i> Source Information</h4>
+            <div class="details-row">
+                <span class="details-label">Source Host</span>
+                <span class="details-value" id="detailSource">-</span>
+            </div>
+            <div class="details-row">
+                <span class="details-label">Source Type</span>
+                <span class="details-value" id="detailSourceType">-</span>
+            </div>
+            <div class="details-row">
+                <span class="details-label">Log File Type</span>
+                <span class="details-value" id="detailType">-</span>
+            </div>
+        </div>
+        
+        <div class="details-section">
+            <h4><i class="fa-solid fa-circle-exclamation"></i> Event Details</h4>
+            <div class="details-row">
+                <span class="details-label">Severity</span>
+                <span class="details-value" id="detailSeverity">-</span>
+            </div>
+            <div class="details-row">
+                <span class="details-label">Event Description</span>
+                <span class="details-value" id="detailEvent">-</span>
+            </div>
+            <div class="details-row">
+                <span class="details-label">Raw Detail</span>
+                <span class="details-value" id="detailDetail">-</span>
+            </div>
+        </div>
+        
+        <div class="details-section">
+            <h4><i class="fa-regular fa-note-sticky"></i> Analysis</h4>
+            <div class="details-row">
+                <span class="details-label">Annotation</span>
+                <span class="details-value" id="detailAnnotation">-</span>
+            </div>
+            <div class="details-row">
+                <span class="details-label">Event ID</span>
+                <span class="details-value" id="detailEventId">-</span>
+            </div>
+        </div>
+        
+        <div class="details-section file-info-section" id="fileInfoSection" style="display: none;">
+            <h4><i class="fa-solid fa-file-lines"></i> Loaded Files</h4>
+            <div id="loadedFilesList"></div>
+        </div>
+        
+        <div class="details-section raw-data-section" id="rawDataSection">
+            <h4><i class="fa-solid fa-code"></i> Raw Log Data</h4>
+            <div id="detailRawData">-</div>
+        </div>
+        
+        <div class="viewed-timestamp">
+            <i class="fa-solid fa-eye"></i>
+            <span>Viewed at: <strong id="viewedAtTime">-</strong></span>
+        </div>
+        
+        <div style="margin-top: 1.5rem; display: flex; gap: 10px; justify-content: flex-end;">
+            <button class="btn" onclick="closeDetailsModal()"><i class="fa-solid fa-xmark"></i> Close</button>
+            <button class="btn btn-primary" id="copyDetailsBtn"><i class="fa-regular fa-copy"></i> Copy Details</button>
+        </div>
+    </div>
+</div>
+
+<!-- Load JS files in order -->
+<script src="js/utils.js"></script>
+<script src="js/data.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>
+
