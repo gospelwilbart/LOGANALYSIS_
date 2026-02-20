@@ -1,0 +1,121 @@
+2026-01-12T02:00:00 APP_AUDIT INFO user=admin action=login status=success ip=192.168.1.100
+2026-01-12T02:01:00 APP_AUDIT WARNING user=unknown action=login status=failed ip=45.33.12.55 reason=invalid_credentials
+2026-01-12T02:02:00 APP_AUDIT INFO user=developer action=file_read path=/var/www/html/index.php status=success
+2026-01-12T02:03:00 APP_AUDIT ERROR user=admin action=delete status=failed path=/etc/passwd reason=permission_denied
+2026-01-12T02:04:00 APP_AUDIT WARNING user=attacker action=sql_injection detected=Yes ip=203.0.113.50
+2026-01-12T02:05:00 APP_AUDIT INFO user=admin action=config_modify section=security status=success
+2026-01-12T02:06:00 APP_AUDIT ERROR user=root action=database_query status=error message=timeout
+2026-01-12T02:07:00 APP_AUDIT WARNING user=unknown action=xss_attempt detected=Yes ip=198.51.100.25
+2026-01-12T02:08:00 APP_AUDIT INFO user=developer action=deploy status=success environment=production
+2026-01-12T02:09:00 APP_AUDIT ALERT user=admin action=privilege_escalation detected=Yes ip=45.33.12.55
+2026-01-12T02:10:00 APP_AUDIT INFO user=backup action=backup status=success path=/backup
+2026-01-12T02:11:00 APP_AUDIT ERROR user=unknown action=brute_force detected=Yes attempts=15 ip=203.0.113.50
+2026-01-12T02:12:00 APP_AUDIT WARNING user=developer action=api_rate_limit threshold_exceeded=Yes
+2026-01-12T02:13:00 APP_AUDIT INFO user=admin action=user_create status=success new_user=john_doe
+2026-01-12T02:14:00 APP_AUDIT ERROR user=developer action=compilation status=failed error=undefined_variable
+2026-01-12T02:15:00 APP_AUDIT WARNING user=unknown action=path_traversal detected=Yes ip=198.51.100.25
+2026-01-12T02:16:00 APP_AUDIT INFO user=admin action=role_assign status=success role=manager user=alice
+2026-01-12T02:17:00 APP_AUDIT ALERT user=root action=system_command executed=Yes command=rm -rf /
+2026-01-12T02:18:00 APP_AUDIT INFO user=developer action=git_push status=success branch=main
+2026-01-12T02:19:00 APP_AUDIT ERROR user=unknown action=file_upload blocked=Yes type=exe ip=45.33.12.55
+2026-01-12T02:20:00 APP_AUDIT WARNING user=developer action=memory_limit threshold_exceeded=Yes
+2026-01-12T02:21:00 APP_AUDIT INFO user=admin action=password_change status=success user=bob
+2026-01-12T02:22:00 APP_AUDIT ERROR user=unknown action=csrf_attempt detected=Yes ip=203.0.113.50
+2026-01-12T02:23:00 APP_AUDIT INFO user=admin action=firewall_change status=success rule=allow_22
+2026-01-12T02:24:00 APP_AUDIT WARNING user=developer action=debug_mode enabled=Yes
+2026-01-12T02:25:00 APP_AUDIT ERROR user=unknown action=ldap_injection detected=Yes ip=198.51.100.25
+2026-01-12T02:26:00 APP_AUDIT INFO user=admin action=service_restart status=success service=nginx
+2026-01-12T02:27:00 APP_AUDIT ALERT user=root action=kernel_module loaded=Yes module=suspicious
+2026-01-12T02:28:00 APP_AUDIT INFO user=developer action=docker_run status=success image=app:latest
+2026-01-12T02:29:00 APP_AUDIT WARNING user=unknown action=cookie_stealing detected=Yes ip=45.33.12.55
+2026-01-12T02:30:00 APP_AUDIT ERROR user=developer action=build status=failed error=compilation_failed
+2026-01-12T02:31:00 APP_AUDIT INFO user=admin action=api_key_rotate status=success service=aws
+2026-01-12T02:32:00 APP_AUDIT WARNING user=unknown action=command_injection detected=Yes ip=203.0.113.50
+2026-01-12T02:33:00 APP_AUDIT INFO user=developer action=file_write status=success path=/tmp/cache
+2026-01-12T02:34:00 APP_AUDIT ERROR user=unknown action=session_hijack detected=Yes ip=198.51.100.25
+2026-01-12T02:35:00 APP_AUDIT INFO user=admin action=certificate_install status=success domain=example.com
+2026-01-12T02:36:00 APP_AUDIT WARNING user=developer action=verbose_logging enabled=Yes
+2026-01-12T02:37:00 APP_AUDIT ALERT user=root action=root_access status=success from=192.168.1.50
+2026-01-12T02:38:00 APP_AUDIT INFO user=developer action=database_migration status=success version=2.1.0
+2026-01-12T02:39:00 APP_AUDIT ERROR user=unknown action=deserialization_attack detected=Yes ip=45.33.12.55
+2026-01-12T02:40:00 APP_AUDIT INFO user=admin action=permission_grant status=success resource=/var/data
+2026-01-12T02:41:00 APP_AUDIT WARNING user=unknown action=buffer_overflow detected=Yes ip=203.0.113.50
+2026-01-12T02:42:00 APP_AUDIT INFO user=developer action=cache_clear status=success
+2026-01-12T02:43:00 APP_AUDIT ERROR user=unknown action=privilege_escalation detected=Yes ip=198.51.100.25
+2026-01-12T02:44:00 APP_AUDIT INFO user=admin action=user_disable status=success user=hacker
+2026-01-12T02:45:00 APP_AUDIT WARNING user=developer action=insecure_protocol detected=Yes protocol=ftp
+2026-01-12T02:46:00 APP_AUDIT ALERT user=root action=file_integrity_alert changed=Yes file=/etc/passwd
+2026-01-12T02:47:00 APP_AUDIT INFO user=developer action=api_call status=success endpoint=/users
+2026-01-12T02:48:00 APP_AUDIT ERROR user=unknown action=xml_injection detected=Yes ip=45.33.12.55
+2026-01-12T02:49:00 APP_AUDIT INFO user=admin action=account_lock status=success user=attacker
+2026-01-12T02:50:00 APP_AUDIT WARNING user=unknown action=suspicious_activity detected=Yes ip=203.0.113.50
+2026-01-12T02:51:00 APP_AUDIT INFO user=developer action=dependency_update status=success packages=5
+2026-01-12T02:52:00 APP_AUDIT ERROR user=unknown action=reverse_shell detected=Yes ip=198.51.100.25
+2026-01-12T02:53:00 APP_AUDIT INFO user=admin action=policy_update status=success policy=security
+2026-01-12T02:54:00 APP_AUDIT WARNING user=developer action=plaintext_password detected=Yes
+2026-01-12T02:55:00 APP_AUDIT ALERT user=root action=unauthorized_access detected=Yes path=/etc/shadow
+2026-01-12T02:56:00 APP_AUDIT INFO user=developer action=query_execute status=success database=production
+2026-01-12T02:57:00 APP_AUDIT ERROR user=unknown action=malware_upload detected=Yes ip=45.33.12.55
+2026-01-12T02:58:00 APP_AUDIT INFO user=admin action=session_timeout changed=Yes minutes=30
+2026-01-12T02:59:00 APP_AUDIT WARNING user=unknown action=port_scan detected=Yes ip=203.0.113.50
+2026-01-12T03:00:00 APP_AUDIT INFO user=developer action=log_export status=success format=csv
+2026-01-12T03:01:00 APP_AUDIT ERROR user=unknown action=data_exfiltration detected=Yes ip=198.51.100.25
+2026-01-12T03:02:00 APP_AUDIT INFO user=admin action=encryption_enable status=success algorithm=AES256
+2026-01-12T03:03:00 APP_AUDIT WARNING user=developer action=weak_cipher detected=Yes cipher=des
+2026-01-12T03:04:00 APP_AUDIT ALERT user=root action=backdoor_created detected=Yes
+2026-01-12T03:05:00 APP_AUDIT INFO user=developer action=container_create status=success image=python:3.9
+2026-01-12T03:06:00 APP_AUDIT ERROR user=unknown action=csrf_token_missing detected=Yes ip=45.33.12.55
+2026-01-12T03:07:00 APP_AUDIT INFO user=admin action=security_scan status=success vulnerabilities=0
+2026-01-12T03:08:00 APP_AUDIT WARNING user=developer action=verbose_error enabled=Yes
+2026-01-12T03:09:00 APP_AUDIT INFO user=admin action=whitelist_update status=success ip=10.0.0.50
+2026-01-12T03:10:00 APP_AUDIT ERROR user=unknown action=dos_attack detected=Yes ip=203.0.113.50
+2026-01-12T03:11:00 APP_AUDIT INFO user=developer action=cache_warm status=success
+2026-01-12T03:12:00 APP_AUDIT WARNING user=unknown action=information_disclosure detected=Yes ip=198.51.100.25
+2026-01-12T03:13:00 APP_AUDIT ALERT user=root action=system_modification detected=Yes
+2026-01-12T03:14:00 APP_AUDIT INFO user=admin action=secret_rotate status=success
+2026-01-12T03:15:00 APP_AUDIT ERROR user=unknown action=xxe_attack detected=Yes ip=45.33.12.55
+2026-01-12T03:16:00 APP_AUDIT INFO user=developer action=health_check status=success
+2026-01-12T03:17:00 APP_AUDIT WARNING user=developer action=deprecated_function detected=Yes
+2026-01-12T03:18:00 APP_AUDIT INFO user=admin action=resource_quota status=success memory=4GB
+2026-01-12T03:19:00 APP_AUDIT ERROR user=unknown action=banner_grabbing detected=Yes ip=203.0.113.50
+2026-01-12T03:20:00 APP_AUDIT INFO user=developer action=keygen status=success algorithm=rsa4096
+2026-01-12T03:21:00 APP_AUDIT WARNING user=unknown action=directory_listing detected=Yes ip=198.51.100.25
+2026-01-12T03:22:00 APP_AUDIT ALERT user=root action=sensitive_file_access detected=Yes file=/etc/shadow
+2026-01-12T03:23:00 APP_AUDIT INFO user=admin action=vpn_connect status=success ip=192.168.1.100
+2026-01-12T03:24:00 APP_AUDIT ERROR user=unknown action=ldap_bind_failed detected=Yes ip=45.33.12.55
+2026-01-12T03:25:00 APP_AUDIT INFO user=developer action=code_deploy status=success version=1.2.3
+2026-01-12T03:26:00 APP_AUDIT WARNING user=developer action=weak_password detected=Yes user=admin
+2026-01-12T03:27:00 APP_AUDIT INFO user=admin action=security_banner status=updated
+2026-01-12T03:28:00 APP_AUDIT ERROR user=unknown action=bypass_attempt detected=Yes ip=203.0.113.50
+2026-01-12T03:29:00 APP_AUDIT INFO user=developer action=api_limit status=reset
+2026-01-12T03:30:00 APP_AUDIT WARNING user=unknown action=clickjacking detected=Yes ip=198.51.100.25
+2026-01-12T03:31:00 APP_AUDIT ALERT user=root action=privilege_abuse detected=Yes
+2026-01-12T03:32:00 APP_AUDIT INFO user=admin action=token_refresh status=success
+2026-01-12T03:33:00 APP_AUDIT ERROR user=unknown action=webshell_upload detected=Yes ip=45.33.12.55
+2026-01-12T03:34:00 APP_AUDIT INFO user=developer action=query_optimize status=success
+2026-01-12T03:35:00 APP_AUDIT WARNING user=developer action=sql_dangerous detected=Yes query=DROP
+2026-01-12T03:36:00 APP_AUDIT INFO user=admin action=alert_config status=updated
+2026-01-12T03:37:00 APP_AUDIT ERROR user=unknown action=bot_access detected=Yes ip=203.0.113.50
+2026-01-12T03:38:00 APP_AUDIT INFO user=developer action=cache_invalidate status=success
+2026-01-12T03:39:00 APP_AUDIT WARNING user=unknown action=credential_stuffing detected=Yes ip=198.51.100.25
+2026-01-12T03:40:00 APP_AUDIT ALERT user=root action=ransomware_pattern detected=Yes
+2026-01-12T03:41:00 APP_AUDIT INFO user=admin action=fail2ban status=updated
+2026-01-12T03:42:00 APP_AUDIT ERROR user=unknown action=api_abuse detected=Yes ip=45.33.12.55
+2026-01-12T03:43:00 APP_AUDIT INFO user=developer action=index_rebuild status=success
+2026-01-12T03:44:00 APP_AUDIT WARNING user=developer action=exception_leak detected=Yes
+2026-01-12T03:45:00 APP_AUDIT INFO user=admin action=ip_blacklist status=updated
+2026-01-12T03:46:00 APP_AUDIT ERROR user=unknown action=account_takeover detected=Yes ip=203.0.113.50
+2026-01-12T03:47:00 APP_AUDIT INFO user=developer action=backup_verify status=success
+2026-01-12T03:48:00 APP_AUDIT WARNING user=unknown action=mitm_attempt detected=Yes ip=198.51.100.25
+2026-01-12T03:49:00 APP_AUDIT ALERT user=root action=filesystem_change detected=Yes
+2026-01-12T03:50:00 APP_AUDIT INFO user=admin action=log_retention status=configured days=90
+2026-01-12T03:51:00 APP_AUDIT ERROR user=unknown action=cryptominer_detected detected=Yes ip=45.33.12.55
+2026-01-12T03:52:00 APP_AUDIT INFO user=developer action=compression status=success ratio=75%
+2026-01-12T03:53:00 APP_AUDIT WARNING user=developer action=memory_leak detected=Yes
+2026-01-12T03:54:00 APP_AUDIT INFO user=admin action=mfa_enable status=success user=john
+2026-01-12T03:55:00 APP_AUDIT ERROR user=unknown action=phishing_attempt detected=Yes ip=203.0.113.50
+2026-01-12T03:56:00 APP_AUDIT INFO user=developer action=compression status=success
+2026-01-12T03:57:00 APP_AUDIT WARNING user=unknown action=zero_day_exploit detected=Yes ip=198.51.100.25
+2026-01-12T03:58:00 APP_AUDIT ALERT user=root action=unusual_process detected=Yes
+2026-01-12T03:59:00 APP_AUDIT INFO user=admin action=audit_complete status=success findings=12
+2026-01-12T04:00:00 APP_AUDIT ERROR user=unknown action=data_breach detected=Yes ip=45.33.12.55

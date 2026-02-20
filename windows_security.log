@@ -1,0 +1,165 @@
+2026-01-12T02:09:55 EventID=4624 User=JohnPC Status=Success IP=192.168.1.12 LoginType=Interactive
+2026-01-12T02:10:45 EventID=4625 User=Administrator Status=Failed IP=45.33.12.55 Reason=BadPassword
+2026-01-12T02:10:47 EventID=4625 User=Administrator Status=Failed IP=45.33.12.55 Reason=BadPassword
+2026-01-12T02:10:49 EventID=4625 User=Administrator Status=Failed IP=45.33.12.55 Reason=BadPassword
+2026-01-12T02:11:10 EventID=4624 User=Administrator Status=Success IP=45.33.12.55 LoginType=Network
+2026-01-12T02:12:30 EventID=4672 User=Administrator Privilege=AdminGranted SecurityLevel=Elevated
+2026-01-12T02:15:01 EventID=1102 User=Administrator Action=LogCleared AuditPolicy=Modified
+2026-01-12T02:16:00 EventID=4624 User=attacker Status=Success IP=192.168.1.200 LoginType=RemoteInteractive
+2026-01-12T03:00:00 EventID=4625 User=root Status=Failed IP=10.0.0.55 Reason=UnknownUserType
+2026-01-12T03:05:22 EventID=4648 User=JohnPC Target=DC-01 OpType=ExplicitCredential LogonType=9
+2026-01-12T03:10:45 EventID=4634 User=Administrator Status=LoggedOff SessionID=4521
+2026-01-12T03:15:00 EventID=4688 User=PowerShell Process=malware.exe ParentProcess=powershell.exe
+2026-01-12T03:20:30 EventID=4697 User=SYSTEM Service=mimikatz.exe Action=ServiceInstall
+2026-01-12T03:25:00 EventID=4656 User=Administrator Object=\REGISTRY\MACHINE\SAM HandleID=0x1234
+2026-01-12T03:30:15 EventID=4719 User=SYSTEM Policy=AuditLogon Events=Disabled
+2026-01-12T03:35:00 EventID=4720 User=NewAdmin Account=attacker_door Status=Created
+2026-01-12T03:40:22 EventID=4726 User=Administrator Target=TestUser Account=Deleted
+2026-01-12T03:45:00 EventID=4732 User=Administrator Member=Domain\Admins Added=Yes
+2026-01-12T03:50:00 EventID=4756 User=Administrator Member=Schema Admins Added=Yes
+2026-01-12T04:00:00 EventID=7045 User=SYSTEM Service=新型恶意软件.exe Path=C:\Temp\malware.exe
+2026-01-12T04:05:30 EventID=4625 User=admin Status=Failed IP=203.0.113.50 Reason=AccountLocked
+2026-01-12T04:10:00 EventID=4776 User=NT AUTHORITY CredentialValidator=Failed Domain=WORKSTATION
+2026-01-12T04:15:00 EventID=4672 User=SYSTEM Privilege=SeSecurityPrivilege Assigned=Yes
+2026-01-12T04:20:00 EventID=4689 User=taskmgr.exe Process=notepad.exe Terminated=Normal
+2026-01-12T04:25:00 EventID=5145 User=Administrator Object=\Device\Harddisk0\secret.txt Access=Read
+2026-01-12T04:30:00 EventID=5156 User=SYSTEM Direction=Inbound SourceIP=45.33.12.55 DestIP=192.168.1.10
+2026-01-12T04:35:00 EventID=4647 User=JohnPC Target=Administrator BypassUAC=Yes
+2026-01-12T04:40:00 EventID=4724 User=Administrator Target=JohnPC PasswordReset=Attempted
+2026-01-12T04:45:00 EventID=4768 User=Administrator TGT=Granted TicketSize=1024
+2026-01-12T04:50:00 EventID=4769 User=Administrator TGS=Requested Service=HTTP/fileserver
+2026-01-12T04:55:00 EventID=4770 User=Administrator TGS=Renewed Service=LDAP
+2026-01-12T05:00:00 EventID=4616 User=SYSTEM TimeChange=BeforeAndAfter OldTime=2026-01-11 NewTime=2026-01-12
+2026-01-12T05:05:00 EventID=4658 User=Administrator Object=\Device\CdRom0 Handle=Closed
+2026-01-12T05:10:00 EventID=4663 User=Administrator Object=\Device\Harddisk0\ sensitive.txt Access=Write
+2026-01-12T05:15:00 EventID=4621 User=SYSTEM Status=InteractiveLogonBlocked Policy=Lockout
+2026-01-12T05:20:00 EventID=4622 User=SYSTEM Status=SecurityPackageLoad=Success
+2026-01-12T05:25:00 EventID=4623 User=Administrator Status=LogonSuccess AuthPackage=MSV1_0
+2026-01-12T05:30:00 EventID=4629 EventID=4629 User=Administrator SessionID=4533 SourceNetworkAddress=10.10.10.50
+2026-01-12T05:35:00 EventID=4635 User=SYSTEM Status=Failure Reason=InvalidParameter
+2026-01-12T05:40:00 EventID=4649 User=Administrator Status=NetUseEnum Suspect=Yes
+2026-01-12T05:45:00 EventID=4650 User=Administrator Status=IPSecEstablished Mode=MainMode
+2026-01-12T05:50:00 EventID=4651 User=Administrator ObjectType=File Name=\\?\C:\Windows\System32
+2026-01-12T05:55:00 EventID=4652 User=Administrator Denied=AccessMask=0x100000
+2026-01-12T06:00:00 EventID=4653 User=Administrator Status=AccessDenied Enforcement=Private
+2026-01-12T06:05:00 EventID=4654 User=Administrator Object=\Device\Ip Filter=TCP
+2026-01-12T06:10:00 EventID=4657 User=Administrator RegistryKey=HKLM\Software\Microsoft\Windows\CurrentVersion\Run
+2026-01-12T06:15:00 EventID=4659 User=Administrator Handle=Acquired Door=TrustedInstaller
+2026-01-12T06:20:00 EventID=4660 User=Administrator Object=\Device\Harddisk0\Deleted
+2026-01-12T06:25:00 EventID=4661 User=Administrator Object=SID Owner=Admin
+2026-01-12T06:30:00 EventID=4662 User=Administrator Operation=QueryValue Key=\SOFTWARE\Microsoft
+2026-01-12T06:35:00 EventID=4664 User=Administrator Status=LinkCreated Type=HardLink
+2026-01-12T06:40:00 EventID=4665 User=Administrator Application=Microsoft-Windows-Explorer
+2026-01-12T06:45:00 EventID=4666 User=Administrator Operation=ReadAttributes Object=File
+2026-01-12T06:50:00 EventID=4667 User=Administrator Operation=WriteAttributes Object=File
+2026-01-12T06:55:00 EventID=4668 User=Administrator Process=explorer.exe Started=Yes
+2026-01-12T07:00:00 EventID=4670 User=Administrator Object=\Device\Harddisk0\Policy.xml Permissions=Changed
+2026-01-12T07:05:00 EventID=4671 User=Administrator Object=USB Token Snapped=HardwareId
+2026-01-12T07:10:00 EventID=4673 User=Administrator Privilege=SeRemoteInteractiveLogonRight Required=Yes
+2026-01-12T07:15:00 EventID=4674 User=Administrator Operation=SeCreateTokenPrivilege Attempted=Yes
+2026-01-12T07:20:00 EventID=4675 User=Administrator Objects=SID SidsFiltered=3
+2026-01-12T07:25:00 EventID=4680 User=Administrator ProcessName=Taskmgr.exe WindowsVersion=10.0
+2026-01-12T07:30:00 EventID=4681 User=Administrator NewProcess=conhost.exe ParentProcess=cmd.exe
+2026-01-12T07:35:00 EventID=4682 User=Administrator TokenElevationType=Limited RunLevel=Standard
+2026-01-12T07:40:00 EventID=4683 User=Administrator Operation=SeSecurityPrivilege Accessed=Yes
+2026-01-12T07:45:00 EventID=4684 User=Administrator EventType=ProcessCreate NewTime=2026-01-12T07:45:00
+2026-01-12T07:50:00 EventID=4685 User=Administrator Process1=svchost.exe Process2=services.exe
+2026-01-12T07:55:00 EventID=4686 User=Administrator User=Alice CredentialType=Smartcard
+2026-01-12T08:00:00 EventID=4687 User=Administrator Process=svchost.exe ExitCode=0 Status=Success
+2026-01-12T08:05:00 EventID=4690 User=Administrator HandleDuplication=Allowed Object=\Device\NamedPipe
+2026-01-12T08:10:00 EventID=4691 User=Administrator Operation=ReadDirect PhysicalAddress=0x00000000
+2026-01-12T08:15:00 EventID=4692 User=Administrator BackupDrive=E:\ Status=Started
+2026-01-12T08:20:00 EventID=4693 User=Administrator RestoreDrive=E:\ Status=Completed
+2026-01-12T08:25:00 EventID=4694 User=Administrator Object=AuditPolicy Changed=Yes
+2026-01-12T08:30:00 EventID=4695 User=Administrator Privilege=SeAuditPrivilege Attempted6-01-=Yes
+20212T08:35:00 EventID=4696 User=Administrator Token=Primary Group=Everyone
+2026-01-12T08:40:00 EventID=4698 User=Administrator TaskName=DailyBackup Created=Yes
+2026-01-12T08:45:00 EventID=4699 User=Administrator TaskName=WeeklyCleanup Triggered=Yes
+2026-01-12T08:50:00 EventID=4700 User=Administrator TaskName=UpdateChecker Modified=Yes
+2026-01-12T08:55:00 EventID=4701 User=Administrator TaskName=AutoUpdate Disabled=Yes
+2026-01-12T09:00:00 EventID=4702 User=Administrator TaskName=SecurityScan Updated=Yes
+2026-01-12T09:05:00 EventID=4703 User=Administrator TokenElevation=TokenElevated Privilege=SeDebugPrivilege
+2026-01-12T09:10:00 EventID=4704 User=Administrator Policy=SeNetworkLogonRight Assigned=Yes
+2026-01-12T09:15:00 EventID=4705 User=Administrator Privilege=SeDelegateSessionUserImpersonatePrivilege Removed
+2026-01-12T09:20:00 EventID=4706 User=Administrator NewTrust=CorpVPN Created=Yes
+2026-01-12T09:25:00 EventID=4707 User=Administrator Trust=FinanceDB Deleted=Yes
+2026-01-12T09:30:00 EventID=4708 User=Administrator AccountPolicy=MinPasswordAge Changed=1
+2026-01-12T09:35:00 EventID=4709 User=Administrator AccountPolicy=LockoutThreshold Changed=5
+2026-01-12T09:40:00 EventID=4710 User=Administrator AccountPolicy=MaxPasswordAge Changed=90
+2026-01-12T09:45:00 EventID=4711 User=Administrator Policy=PreauthenticationRequired Status=Enabled
+2026-01-12T09:50:00 EventID=4712 User=Administrator Policy=TrustLevel=Sensitive Status=Modified
+2026-01-12T09:55:00 EventID=4713 User=Administrator Policy=KerberosPolicy Modified=Yes
+2026-01-12T10:00:00 EventID=4714 User=Administrator Policy=EFSRecovery Changed=Yes
+2026-01-12T10:05:00 EventID=4715 User=Administrator AuditPolicy=Logon Modified=SuccessAndFailure
+2026-01-12T10:10:00 EventID=4716 User=Administrator Credential=TrustedForDelegation Added=Yes
+2026-01-12T10:15:00 EventID=4717 User=Administrator Policy=LogonRight Assigned=Network
+2026-01-12T10:20:00 EventID=4718 User=Administrator Policy=SystemAudit Active=Yes
+2026-01-12T10:25:00 EventID=4728 User=Administrator Member=Domain\User Added=Yes
+2026-01-12T10:30:00 EventID=4729 User=Administrator Member=Domain\User Removed=Yes
+2026-01-12T10:35:00 EventID=4730 User=Administrator Group=RemoteDesktopUsers Modified=Yes
+2026-01-12T10:40:00 EventID=4731 User=Administrator NewGroup=NetworkAdmins Created=Yes
+2026-01-12T10:45:00 EventID=4733 User=Administrator Group=BackupOperators Member=Removed
+2026-01-12T10:50:00 EventID=4734 User=Administrator Group=PowerUsers Deleted=Yes
+2026-01-12T10:55:00 EventID=4735 User=Administrator Group=HelpDeskGroup Modified=Yes
+2026-01-12T11:00:00 EventID=4737 User=Administrator Group=Administrators Changed=SIDHistory
+2026-01-12T11:05:00 EventID=4738 User=Administrator Account=JohnDoe Modified=PasswordChanged
+2026-01-12T11:10:00 EventID=4739 User=Administrator Policy=DomainPolicy Changed=MaxPasswordAge
+2026-01-12T11:15:00 EventID=4740 User=Administrator Account=LockedOut Target=WORKSTATION01
+2026-01-12T11:20:00 EventID=4741 User=Administrator Computer=Malicious-PC Created=Yes
+2026-01-12T11:25:00 EventID=4742 User=Administrator Computer=TEST-PC Modified=AccountDisabled
+2026-01-12T11:30:00 EventID=4743 User=Administrator Computer=DEV-SERVER Deleted=Yes
+2026-01-12T11:35:00 EventID=4744 User=Administrator NewComputer=Lab-01 Added=Yes
+2026-01-12T11:40:00 EventID=4745 User=Administrator Computer=WORKSTATION02 Modified=SIDHistory
+2026-01-12T11:45:00 EventID=4746 User=Administrator Computer=BuildServer Modified=DNSHostName
+2026-01-12T11:50:00 EventID=4747 User=Administrator Computer=TestLab Modified=ServiceAllowed
+2026-01-12T11:55:00 EventID=4748 User=Administrator Computer=ProdServer Modified=TrustedForDelegation
+2026-01-12T12:00:00 EventID=4749 User=Administrator Computer=DevBox Modified=TrustedToAuthForDelegation
+2026-01-12T12:05:00 EventID=4750 User=Administrator Computer=AppServer Modified=ADS_UF_TRUSTED_FOR_DELEGATION
+2026-01-12T12:10:00 EventID=4751 User=Administrator Computer=FileServer Modified=KDCChanged
+2026-01-12T12:15:00 EventID=4752 User=Administrator Group=AccountOperators Member=Added
+2026-01-12T12:20:00 EventID=4753 User=Administrator Group=PreWindows2000CompatibleAccess Deleted
+2026-01-12T12:25:00 EventID=4754 User=Administrator Group=Cert Publishers Created=Yes
+2026-01-12T12:30:00 EventID=4755 User=Administrator Group=DHCP Administrators Modified=Yes
+2026-01-12T12:35:00 EventID=4757 User=Administrator Group=Cert Publishers Member=Added
+2026-01-12T12:40:00 EventID=4758 User=Administrator Group=CertificateAdministrators Removed
+2026-01-12T12:45:00 EventID=4759 User=Administrator Group=CloneableDomainMembers Created=Yes
+2026-01-12T12:50:00 EventID=4760 User=Administrator Group=DomainComputers Modified=Yes
+2026-01-12T12:55:00 EventID=4761 User=Administrator Group=EnterpriseReadonlyControllers Modified
+2026-01-12T13:00:00 EventID=4762 User=Administrator Group=KeyAdminMembers Deleted
+2026-01-12T13:05:00 EventID=4763 User=Administrator Group=TPMAdministrators Modified=Yes
+2026-01-12T13:10:00 EventID=4764 User=Administrator Account=TestUser1 PasswordSet=Yes
+2026-01-12T13:15:00 EventID=4765 User=Administrator Account=ServiceAccount Enabled=Yes
+2026-01-12T13:20:00 EventID=4766 User=Administrator Account=TestUser2 PasswordMismatch=Yes
+2026-01-12T13:25:00 EventID=4767 User=Administrator Account=AttackerLocked Unlocked=Yes
+2026-01-12T13:30:00 EventID=4771 User=Administrator PreauthFailed=BadEncryptionType Reason=Unknown
+2026-01-12T13:35:00 EventID=4772 User=Administrator KDCError=BadType Requested=Unknown
+2026-01-12T13:40:00 EventID=4773 User=Administrator KDCError=PADATA_TYPERejected Status=NTStatus
+2026-01-12T13:45:00 EventID=4774 User=Administrator Account=JohnPC Mapped=Yes
+2026-01-12T13:50:00 EventID=4775 User=Administrator Account=SERVER01 Authenticated=Yes
+2026-01-12T13:55:00 EventID=4777 User=Administrator Account=InvalidAccount Failed=BadUser
+2026-01-12T14:00:00 EventID=4778 User=Administrator Session=Console Reconnected=Yes
+2026-01-12T14:05:00 EventID=4779 User=Administrator Session=Console Disconnected=Yes
+2026-01-12T14:10:00 EventID=4780 User=Administrator Account=OldUser PasswordSet=Administrator
+2026-01-12T14:15:00 EventID=4781 User=Administrator Account=User1 NameChanged=OldName
+2026-01-12T14:20:00 EventID=4782 User=Administrator Account=PasswordSame OldHash=NewHash
+2026-01-12T14:25:00 EventID=4783 User=Administrator Account=AppPoolUser Disabled=Yes
+2026-01-12T14:30:00 EventID=4784 User=Administrator Account=ServiceUser PasswordNeverExpires=Yes
+2026-01-12T14:35:00 EventID=4785 User=Administrator Account=User2 AttributeChanged=SIDHistory
+2026-01-12T14:40:00 EventID=4786 User=Administrator Account=AdminUser PrimaryGroup=DomainAdmins
+2026-01-12T14:45:00 EventID=4787 User=Administrator Account=TempUser Added=SIDHistory
+2026-01-12T14:50:00 EventID=4788 User=Administrator Account=OldAdmin Modified=PasswordNotRequired
+2026-01-12T14:55:00 EventID=4789 User=Administrator Account=User3 Deleted=SIDHistory
+2026-01-12T15:00:00 EventID=4790 User=Administrator Account=TestAccount UACChanged=Yes
+2026-01-12T15:05:00 EventID=4791 User=Administrator Computer=WORKSTATION ProfilePath=Modified
+2026-01-12T15:10:00 EventID=4792 User=Administrator Account=NewUser HomeDrive=Changed
+2026-01-12T15:15:00 EventID=4793 User=Administrator PasswordPolicy=Complexity Disabled
+2026-01-12T15:20:00 EventID=4794 User=Administrator Account=Locked Out=PasswordPolicy
+2026-01-12T15:25:00 EventID=4797 User=Administrator Attempted=CredentialClear
+2026-01-12T15:30:00 EventID=4798 User=Administrator Account=OldUser CredentialDeleted=Yes
+2026-01-12T15:35:00 EventID=4799 User=Administrator Account=TaskUser Enabled=Yes
+2026-01-12T15:40:00 EventID=4800 User=Administrator Workstation=Locked Status=Locked
+2026-01-12T15:45:00 EventID=4801 User=Administrator Workstation=Unlocked Status=Unlocked
+2026-01-12T15:50:00 EventID=4802 User=Administrator ScreenSaver=Activated
+2026-01-12T15:55:00 EventID=4803 User=Administrator ScreenSaver=Terminated
+2026-01-12T16:00:00 EventID=4804 User=Administrator Workstation=SecureDesktop Switch=Yes
+

